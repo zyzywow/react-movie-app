@@ -38,7 +38,7 @@ export default function Detail() {
             <div className="titleBox">
               <h3>{detail.title}</h3>
               <p className="originalTitle">{detail.original_title}</p>
-              <p className="release">{detail.release_date}</p>
+              {/* <p className="release">{detail.release_date}</p> */}
             </div>
             <div className="summary">
               <dl>

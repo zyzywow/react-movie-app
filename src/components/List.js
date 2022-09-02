@@ -8,7 +8,7 @@ export default function List() {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
     axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_MOVIE_KEY}&language=ko-KR&page=1`).then((res) => {
-      // console.log(res.data);
+      console.log(res.data);
       setMovies(res.data.results);
     });
   }, []);
