@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import "./css/layout.css";
 
@@ -6,7 +6,9 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import List from "./components/List";
 import Detail from "./components/Detail";
+import SearchResult from "./components/SearchResult";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ProfileDetail from "./components/ProfileDetail";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Routes>
           <Route path="/" element={<List />} />
           <Route path="/detail/:id" element={<Detail />} />
+          <Route path="/search" element={<SearchResult />} />
+          <Route path="/profile/:id" element={<ProfileDetail />} />
         </Routes>
         <Footer />
       </div>

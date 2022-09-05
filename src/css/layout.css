@@ -196,17 +196,17 @@ li {
   overflow: hidden;
   width: 100%;
 }
-.detail .profileList li {
+.detail .profileList .item {
   display: flex;
   flex-direction: column;
-  margin: 0 5px;
+  width: 100px;
 }
-.detail .profileList li img {
+.detail .profileList .item img {
   width: 80px;
   height: 120px;
   object-fit: cover;
 }
-.detail .profileList li span {
+.detail .profileList .item span {
   font-size: 12px;
   margin-top: 10px;
 }
@@ -234,6 +234,32 @@ li {
   color: #fff;
   font-size: 18px;
   border-radius: 10px 0 10px 0;
+}
+
+#search {
+  position: absolute;
+  right: 20px;
+  display: flex;
+}
+#search input {
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  outline: none;
+  border: 1px solid #ccc;
+  min-width: 300px;
+}
+#search a {
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 #footer {

@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Profile from "./Profile";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 export default function Detail() {
   const params = useParams();
@@ -67,32 +69,36 @@ export default function Detail() {
               </dl>
               <dl>
                 <dt>cast</dt>
-                <ul className="profileList">
+                <Swiper className="profileList" spaceBetween={1} slidesPerView={"auto"}>
                   {cast.map((item, idx) => {
                     return (
-                      <Profile key={idx} profileInfo={item} />
-                      //<Profile key={idx} profile_path={item.profile_path} name={item.name} />
-                      // <li key={idx}>
-                      //   <img src={`https://image.tmdb.org/t/p/w185/${item.profile_path}`} />
-                      //   <span>{item.name}</span>
-                      // </li>
+                      <SwiperSlide className="item">
+                        <Profile key={idx} profileInfo={item} />
+                      </SwiperSlide>
                     );
+                    //<Profile key={idx} profile_path={item.profile_path} name={item.name} />
+                    // <li key={idx}>
+                    //   <img src={`https://image.tmdb.org/t/p/w185/${item.profile_path}`} />
+                    //   <span>{item.name}</span>
+                    // </li>
                   })}
-                </ul>
+                </Swiper>
               </dl>
               <dl>
                 <dt>crew</dt>
-                <ul className="profileList">
+                <Swiper className="profileList" spaceBetween={1} slidesPerView={"auto"}>
                   {crew.map((item, idx) => {
                     return (
-                      <Profile key={idx} profileInfo={item} />
-                      // <li key={idx}>
-                      //   <img src={`https://image.tmdb.org/t/p/w185/${item.profile_path}`} alt="" />
-                      //   <span>{item.name}</span>
-                      // </li>
+                      <SwiperSlide className="item">
+                        <Profile key={idx} profileInfo={item} />
+                      </SwiperSlide>
                     );
+                    // <li key={idx}>
+                    //   <img src={`https://image.tmdb.org/t/p/w185/${item.profile_path}`} alt="" />
+                    //   <span>{item.name}</span>
+                    // </li>
                   })}
-                </ul>
+                </Swiper>
               </dl>
             </div>
             <div className="overviewBox">
